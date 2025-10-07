@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-/* added ProfileProps here */
-import { Person, ProfileProps } from './models/Person.model';
+import type { Person, ProfileProps } from './models/Person.model';
+import PersonComponent from './components/PersonComponent';
+import Card from 'react-bootstrap/Card';
 
 function App() {
   const student: Person = {
@@ -19,8 +20,9 @@ function App() {
 /* added code stops */
 
   return (
-    <div>
-      {student.name}
+    <div className="container p-3">
+      <h1>{student.name}</h1>
+    
     </div>
   );
 }
